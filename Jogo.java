@@ -22,7 +22,7 @@ public class Jogo {
       }
       personagem.exibirEstado();
       System.out.println("--------------------");
-      Thread.sleep(8000);
+      Thread.sleep(2000);
     }
   }
 }
