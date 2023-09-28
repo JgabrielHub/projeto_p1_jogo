@@ -2,8 +2,8 @@ public class Personagem {
  
   //atributos ou propriedades
   private String nome;
-  private int energia = 10;
-  private int fome = 0;
+  private int energia = 3;
+  private int fome = 5;
   private int sono = 0;
 
   //construtor: lista de parâmetros vazia
@@ -17,12 +17,13 @@ public class Personagem {
 
   Personagem(String nome, int energia, int fome, int sono){
     this.nome = nome;
-    if (energia >= 0 && energia <= 10)
+    if (energia > 0 && energia <= 10)
       this.energia = energia;
     if (fome >= 0 && fome <= 10)
       this.fome = fome;
     if(sono >= 0 && sono <= 10)
-      this.sono = sono;  
+      this.sono = sono;
+      
   }
 
   //comportamentos (métodos)
@@ -71,5 +72,11 @@ public class Personagem {
       sono
     );
   }
- 
+  void morrer(){
+    if(this.energia <= 0){
+      System.out.println(nome + " morreu");
+      System.exit(0);
+      
+    }
+  }
 }
